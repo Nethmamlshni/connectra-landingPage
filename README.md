@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unisera Landing Page
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  
+
+This repository contains the **landing page for Unisera**, a desktop video communication platform for education and training. The landing page allows users to:
+
+- 📥 Download the **Unisera Desktop Application** (Windows, Mac, Linux)  
+- 📘 Learn about the project, its purpose, and main features  
+
+### Features
+
+- HD video meetings  
+- Attendance tracking  
+- In-meeting quizzes  
+- Clean and user-friendly landing page UI  
+
+---
 
 ## Getting Started
 
@@ -6,13 +22,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
