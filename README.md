@@ -22,7 +22,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 To run the development server:
 
 <pre>
-```bash
 npm run dev
 
 </pre>
@@ -36,7 +35,7 @@ This project uses next/font
  to automatically optimize and load Geist
 , a new font family for Vercel.
 
-Learn More 
+### Learn More
 
 To learn more about Next.js, check out:
 
@@ -49,7 +48,7 @@ Learn Next.js
 Next.js GitHub Repository
  — feedback and contributions welcome
 
-Deploy on Vercel
+### Deploy on vercel
 
 The easiest way to deploy this Next.js landing page is using the Vercel Platform
 .
@@ -57,7 +56,7 @@ The easiest way to deploy this Next.js landing page is using the Vercel Platform
 See Next.js deployment docs
  for details.
 
-License
+### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
@@ -66,8 +65,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ✅ This README is:
 
-- One single file  
-- Combines **Next.js setup instructions** + **Unisera landing page description**  
+- Combines **Next.js setup instructions** + **Connectra landing page description**  
 - Includes **features, download info, deployment, and license**  
 
 ---
