@@ -1,8 +1,7 @@
 # Connectra Landing Page
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  
-
-This repository contains the **landing page for Connectra**, a desktop video communication platform for education and training. The landing page allows users to:
+This repository contains the **landing page for Connectra**, a desktop video communication platform for education and training.  
+The landing page allows users to:
 
 - 📥 Download the **Connectra Desktop Application** (Windows, Mac, Linux)  
 - 📘 Learn about the project, its purpose, and main features  
@@ -18,53 +17,55 @@ This repository contains the **landing page for Connectra**, a desktop video com
 
 ## Getting Started
 
-First, run the development server:
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  
+
+To run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 
-Open http://localhost:3000
- with your browser to see the result.
+Open http://localhost:3000 with your browser to see the landing page.
 
 You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.
 
-This project uses next/font
- to automatically optimize and load Geist
-, a new font family for Vercel.
+This project uses next/font to automatically optimize and load Geist, a new font family for Vercel.
 
 Learn More
+To learn more about Next.js, check out:
 
-To learn more about Next.js, take a look at the following resources:
+Next.js Documentation — learn Next.js features and API
 
-Next.js Documentation
- - learn about Next.js features and API.
+Learn Next.js — interactive Next.js tutorial
 
-Learn Next.js
- - an interactive Next.js tutorial.
-
-You can check out the Next.js GitHub repository
- — your feedback and contributions are welcome!
+Next.js GitHub Repository — feedback and contributions welcome
 
 Deploy on Vercel
+The easiest way to deploy this Next.js landing page is using the Vercel Platform.
 
-The easiest way to deploy your Next.js app is to use the Vercel Platform
- from the creators of Next.js.
-
-Check out our Next.js deployment documentation
- for more details.
+See Next.js deployment docs for details.
 
 License
-
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+yaml
+Copy code
 
 ---
 
-This **keeps all the original Next.js instructions** and adds:
+✅ This README is:
 
-- A clear Unisera project description  
-- Features section  
-- Purpose of the landing page  
-- Download button info  
+- One single file  
+- Combines **Next.js setup instructions** + **Unisera landing page description**  
+- Includes **features, download info, deployment, and license**  
 
 ---
+
+If you want, I can **also add a “Download App” badge/button HTML snippet** inside this README so users can click directly from GitHub. This is common for landing page repos.  
+
+Do you want me to add that?
