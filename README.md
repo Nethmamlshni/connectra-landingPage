@@ -1,5 +1,7 @@
 # Connectra Landing Page
-<img width="354" height="153" alt="Screenshot 2025-11-19 at 16 19 12" src="https://github.com/user-attachments/assets/db8a70bc-847a-4446-a652-5c1f80fbf941" />
+<p align="center">
+  <img width="354" height="153" alt="Screenshot 2025-11-19 at 16 19 12" src="https://github.com/user-attachments/assets/db8a70bc-847a-4446-a652-5c1f80fbf941" />
+</p>
 
 This repository contains the **landing page for Connectra**, a desktop video communication platform for education and training.  
 The landing page allows users to:
