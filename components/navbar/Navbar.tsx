@@ -35,8 +35,8 @@ export default function Navbar() {
 
         {/* Button */}
         <Link
-          href="/download"
-          className="ml-2 px-4 py-1.5 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition"
+          href="#download"
+          className="ml-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-sm font-medium hover:bg-blue-600 transition"
         >
           Download
         </Link>

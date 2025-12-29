@@ -88,7 +88,7 @@ export default function TeamSection() {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="hidden md:block absolute top-20 left-0 w-full h-1 bg-blue-400 origin-left rounded-full"
+          className="hidden md:block absolute top-20 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600origin-left rounded-full"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 relative">

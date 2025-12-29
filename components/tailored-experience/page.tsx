@@ -28,7 +28,7 @@ export default function TailoredExperiencePage() {
               onClick={() => setActive(tab)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition
                 ${active === tab
-                  ? "bg-blue-600 text-white"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600"
                   : "bg-white border text-gray-600"
                 }`}
             >
@@ -49,7 +49,7 @@ export default function TailoredExperiencePage() {
               {active} Dashboard
             </h3>
 
-            <button className="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm">
+            <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-sm">
               Create Session
             </button>
           </div>
