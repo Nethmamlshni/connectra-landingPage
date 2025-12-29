@@ -2,6 +2,7 @@ import Hero from "../../components/hero/Hero"
 import FeatureCard from "../../components/ui/FeatureCard"
 import TeamSection from "../../components/team/TeamSection"
 import Counter from "../../components/animations/Counter"
+import Footer from "../../components/footer/Footer";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       </section>
 
       <TeamSection />
+      <Footer/>
     </>
   )
 }
