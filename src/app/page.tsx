@@ -1,11 +1,22 @@
-
-
-export default function Home() {
+import Hero from "../../components/hero/Hero"
+import TeamSection from "../../components/team/TeamSection"
+import Footer from "../../components/footer/Footer";
+import Download from "../../components/downloads/Download";
+import UnifiedLearningPage from "../../components/unified-learning/page";
+import TailoredExperiencePage from "../../components/tailored-experience/page";
+import Features from "../../components/features/Features";
+import ContactPage from "../../components/contact/Contactpage";
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <h1 className="text-4xl font-bold text-zinc-900 dark:text-white">
-        Welcome to CONNECTRA!
-      </h1>
-    </div>
-  );
+    <>
+      <Hero />
+      <UnifiedLearningPage />
+      <TailoredExperiencePage />
+      <Download/>
+      <Features />
+      <ContactPage/>
+      <TeamSection />
+      <Footer/>
+    </>
+  )
 }
