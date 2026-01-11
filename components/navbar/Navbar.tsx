@@ -17,14 +17,11 @@ export default function Navbar() {
           href="/"
           className="font-semibold text-gray-900"
         >
-          UniPlatform
+          Connectra
         </Link>
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
-          <Link href="/" className="hover:text-black transition">
-            Home
-          </Link>
           <Link href="#features" className="hover:text-black transition">
             Features
           </Link>
