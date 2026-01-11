@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion"
 
-export default function DownloadPage() {
+export default function Download() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
+    <div id="download" className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
@@ -56,12 +56,7 @@ export default function DownloadPage() {
               v1.0.0 · Build 145 MB
             </p>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full py-3 rounded-xl font-semibold text-white
-              bg-gradient-to-r from-blue-500 to-purple-600"
-            >
+            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600">
               Download Now
             </motion.button>
 

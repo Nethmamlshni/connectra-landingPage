@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import AnimatedButton from "../../components/ui/AnimatedButton"
 import GradientText from "../../components/animations/GradientText"
+import Link from "next/link";
 
 import { Variants } from "framer-motion"
 
@@ -83,15 +84,13 @@ export default function Hero() {
           variants={item}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <AnimatedButton label="Get Connected for Windows" />
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 rounded-xl font-semibold border border-gray-300
-            text-gray-700 hover:bg-gray-100 transition"
-          >
+          <Link href="/get-connected"> <AnimatedButton label="Get Connected for Windows" /> 
+          </Link>
+          <Link href="/how-it-works">
+          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}   className="px-6 py-3 rounded-xl font-semibold border border-gray-300  text-gray-700 hover:bg-gray-100 transition" >
             See How It Works
           </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
