@@ -6,19 +6,66 @@ import { useState } from "react"
 export default function ContactPage() {
   const [flipped, setFlipped] = useState(false)
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  // Send email function
+  const handleSend = async () => {
+    const nameInput = (document.querySelector<HTMLInputElement>('input[placeholder="Your Name"]')?.value || "").trim()
+    const emailInput = (document.querySelector<HTMLInputElement>('input[placeholder="Email"]')?.value || "").trim()
+    const messageInput = (document.querySelector<HTMLTextAreaElement>('textarea[placeholder="Message"]')?.value || "").trim()
+
+    if (!nameInput || !emailInput || !messageInput) {
+      alert("Please fill all fields")
+      return
+    }
+
+    setLoading(true)
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: nameInput, email: emailInput, message: messageInput }),
+      })
+
+      const result = await res.json()
+      if (res.ok) {
+        setSent(true)
+        setTimeout(() => setSent(false), 1800)
+        setTimeout(() => setFlipped(false), 2500)
+      } else {
+        alert(result.error || "Failed to send message")
+      }
+    } catch (err) {
+      console.error(err)
+      alert("Failed to send message")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br bg-gray-50">
-      <div className="relative w-[420px] bg-white rounded-2xl shadow-2xl pt-56 px-8 pb-8">
+    <div className=" bg-gradient-to-br from-teal-50 via-white to-emerald-50 px-6 py-20 flex flex-col items-center">
 
-        {/* ✅ Confirmation */}
+      {/* ===== HEADER ===== */}
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900">
+        Contact Us
+      </h1>
+      <p className="text-center text-gray-600 mt-4 mb-12 max-w-2xl">
+        Have questions or feedback? Send us a message!
+      </p>
+
+      {/* ===== CONTACT CARD ===== */}
+      <div className="relative w-full max-w-md">
+
+        {/* ✅ Confirmation Message */}
         <AnimatePresence>
           {sent && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute top-24 left-0 right-0 text-center"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="absolute inset-x-0 top-0 text-center mb-6 z-10"
             >
               <SuccessCheck />
               <p className="mt-4 text-gray-600 text-lg font-semibold">
@@ -28,46 +75,48 @@ export default function ContactPage() {
           )}
         </AnimatePresence>
 
-        {/* ✅ Card */}
-        <motion.div
-          className="absolute -top-15 left-1/2 -translate-x-1/2 w-[400px] h-[250px] perspective"
-        >
+        {/* ===== Flip Card ===== */}
+        <motion.div className="relative w-full h-64 perspective">
           <motion.div
-            animate={{
-              rotateY: flipped ? 180 : 0,
-              y: sent ? -600 : 0,
-              x: sent ? 600 : 0,
-            }}
-            transition={{ duration: 1 }}
+            animate={{ rotateY: flipped ? 180 : 0 }}
+            transition={{ duration: 0.8 }}
             className="relative w-full h-full transform-style-preserve-3d"
           >
-            {/* Front */}
-            <div className="absolute inset-0 border border-gray-300 rounded-xl backface-hidden flex items-center justify-center">
-              <span className="text-black text-3xl font-bold">
-                Contact Us
-              </span>
-              <p className="absolute bottom-6 text-gray-500 text-sm">
-                We&apos;d love to hear from you!
+            {/* Front Side */}
+            <div className="absolute inset-0 bg-white border border-gray-300 rounded-xl backface-hidden flex flex-col items-center justify-center p-6">
+              <p className="text-gray-500 text-sm text-center">
+                We&apos;d love to hear from you! Send us a message and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
-            {/* Back */}
-            <div className="absolute inset-0 border border-gray-300 rounded-xl backface-hidden rotate-y-180 p-6 text-white">
-              <form className="space-y-4">
-                <input className="input" placeholder="From" />
-                <input className="input" placeholder="To" />
-                <textarea className="input h-20" placeholder="Message" />
+            {/* Back Side */}
+            <div className="absolute inset-0 bg-white border border-gray-300 rounded-xl backface-hidden rotate-y-180 p-6 flex flex-col justify-center gap-3">
+              <form className="space-y-3">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                />
+                <textarea
+                  placeholder="Message"
+                  className="w-full h-20 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                />
               </form>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* ✅ Buttons */}
-        <div className="flex justify-center gap-4 mt-12">
+        {/* ===== Buttons ===== */}
+        <div className="flex justify-center gap-4 mt-6">
           {!flipped && (
             <button
               onClick={() => setFlipped(true)}
-              className="px-8 py-4 bg-gradient-to-br from-blue-500 to-purple-600 text-black rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+              className="px-8 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transition"
             >
               Send a Message
             </button>
@@ -76,19 +125,16 @@ export default function ContactPage() {
           {flipped && (
             <>
               <button
-                onClick={() => {
-                  setSent(true)
-                  setTimeout(() => setSent(false), 1600)
-                  setTimeout(() => setFlipped(false), 2400)
-                }}
-                className="px-8 py-4 bg-gradient-to-br from-blue-500 to-purple-600 text-black rounded-xl shadow-lg hover:scale-105 transition"
+                onClick={handleSend}
+                disabled={loading}
+                className="px-8 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-xl shadow-lg hover:scale-105 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send
+                {loading ? "Sending..." : "Send"}
               </button>
 
               <button
                 onClick={() => setFlipped(false)}
-                className="px-8 py-4 bg-gradient-to-br  text-black rounded-xl hover:bg-gray-100 transition border border-gray-300"
+                className="px-8 py-3 bg-white text-teal-700 rounded-xl border border-teal-300 hover:bg-teal-50 transition"
               >
                 Close
               </button>
@@ -111,7 +157,7 @@ function SuccessCheck() {
     >
       <circle
         fill="none"
-        stroke="#777"
+        stroke="#14B8A6"
         strokeWidth="6"
         cx="65.1"
         cy="65.1"
@@ -119,7 +165,7 @@ function SuccessCheck() {
       />
       <polyline
         fill="none"
-        stroke="#777"
+        stroke="#14B8A6"
         strokeWidth="6"
         strokeLinecap="round"
         points="100.2,40.2 51.5,88.8 29.8,67.5"

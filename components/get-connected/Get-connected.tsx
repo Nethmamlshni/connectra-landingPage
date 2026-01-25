@@ -5,7 +5,10 @@ import { Download, Monitor, ShieldCheck, Zap } from "lucide-react"
 
 export default function GetConnectedWindows() {
   return (
-    <section id="get-connected" className="min-h-screen bg-white py-24 px-6 mt-25">
+    <section
+      id="get-connected"
+      className="min-h-screen py-24 px-6 mt-25 bg-gradient-to-br from-teal-50 via-teal-100 to-emerald-50"
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -13,7 +16,7 @@ export default function GetConnectedWindows() {
         className="max-w-6xl mx-auto text-center"
       >
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
           Get Connected for Windows
         </h1>
 
@@ -27,7 +30,7 @@ export default function GetConnectedWindows() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           href="#"
-          className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-3 bg-gradient-to-r bg-teal-700 hover:bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg  transition"
         >
           <Download />
           Download for Windows
@@ -59,15 +62,15 @@ export default function GetConnectedWindows() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.2 }}
-            className="bg-white p-8 rounded-2xl shadow-md text-center"
+            className="bg-gradient-to-br from-white/80 via-white/70 to-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg text-center border border-gray-200"
           >
-            <div className="flex justify-center mb-4 text-blue-600">
+            <div className="flex justify-center mb-4 text-teal-600">
               {item.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">
               {item.title}
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-700 text-sm">
               {item.desc}
             </p>
           </motion.div>

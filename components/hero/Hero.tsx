@@ -1,10 +1,13 @@
 "use client"
-import { motion } from "framer-motion"
+
+import { motion, Variants } from "framer-motion"
+import Link from "next/link"
 import AnimatedButton from "../../components/ui/AnimatedButton"
 import GradientText from "../../components/animations/GradientText"
-import Link from "next/link";
 
-import { Variants } from "framer-motion"
+/* ===========================
+   Animation Variants
+=========================== */
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -26,11 +29,10 @@ const item: Variants = {
     y: 0,
     transition: {
       duration: 0.7,
-      ease: [0.16, 1, 0.3, 1], // ✅ FIXED
+      ease: [0.16, 1, 0.3, 1],
     },
   },
 }
-
 
 /* ===========================
    Hero Component
@@ -39,13 +41,15 @@ const item: Variants = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
       {/* --------------------------
          Background Glow Effects
       -------------------------- */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-purple-400/30 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-120px] right-[-120px] w-[420px] h-[420px] bg-blue-400/30 rounded-full blur-[120px]" />
-      </div>
+  <div className="absolute top-[-140px] left-[-140px] w-[460px] h-[460px] bg-teal-500/30 rounded-full blur-[140px]" />
+  <div className="absolute bottom-[-140px] right-[-140px] w-[460px] h-[460px] bg-emerald-500/30 rounded-full blur-[140px]" />
+</div>
+
 
       {/* --------------------------
          Content Container
@@ -59,12 +63,12 @@ export default function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={item}
-          className="mb-4 text-sm md:text-base font-medium text-blue-600"
+          className="mb-4 text-sm md:text-base font-medium text-teal-700"
         >
           The Digital Campus Platform
         </motion.p>
 
-        {/* Animated Gradient Title */}
+        {/* Title */}
         <motion.div variants={item}>
           <GradientText text="The Digital Campus, Reimagined." />
         </motion.div>
@@ -84,12 +88,35 @@ export default function Hero() {
           variants={item}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="/get-connected"> <AnimatedButton label="Get Connected for Windows" /> 
+          {/* Primary Button */}
+          <Link href="/get-connected">
+           <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="
+              px-6 py-3 rounded-xl font-semibold
+              bg-teal-700 hover:bg-teal-800
+              text-white transition
+            " 
+          >
+            Get Connected for Windows
+          </motion.div>
+        
           </Link>
+
+          {/* Secondary Button */}
           <Link href="/how-it-works">
-          <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}   className="px-6 py-3 rounded-xl font-semibold border border-gray-300  text-gray-700 hover:bg-gray-100 transition" >
-            See How It Works
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="
+                px-6 py-3 rounded-xl font-semibold
+                bg-teal-700 hover:bg-teal-800
+                text-white transition
+              "
+            >
+              See How It Works
+            </motion.button>
           </Link>
         </motion.div>
       </motion.div>

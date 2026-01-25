@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-24">
+    <footer className="bg-teal-700 border-t border-teal-600  text-white pt-20">
       {/* Top section */}
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6">
         
@@ -16,10 +16,10 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="font-semibold text-gray-900 mb-2">
+          <h3 className="font-semibold text-white mb-2">
             UniPlatform
           </h3>
-          <p className="text-gray-500 text-sm max-w-md">
+          <p className="text-teal-200 text-sm max-w-md">
             The next generation online mentoring platform for modern
             university education.
           </p>
@@ -31,38 +31,38 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-sm text-gray-500 md:text-right"
+          className="text-sm md:text-right"
         >
-          <p className="uppercase tracking-wide text-xs text-gray-400">
+          <p className="uppercase tracking-wide text-xs text-teal-300">
             Developed in collaboration with
           </p>
-          <p className="font-medium text-gray-700">
+          <p className="font-medium text-teal-100">
             Uva Wellassa University
           </p>
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-teal-300">
             Badulla, Sri Lanka
           </p>
         </motion.div>
       </div>
 
       {/* Bottom section */}
-      <div className="border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+      <div className="border-t border-teal-600">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           
-          <span>
+          <span className="text-teal-100">
             © {new Date().getFullYear()} UniPlatform. All rights reserved.
           </span>
 
           <div className="flex gap-6">
             <Link
               href="/privacy"
-              className="hover:text-gray-900 transition"
+              className="text-teal-100 hover:text-teal-300 transition"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="hover:text-gray-900 transition"
+              className="text-teal-100 hover:text-teal-300 transition"
             >
               Terms of Service
             </Link>

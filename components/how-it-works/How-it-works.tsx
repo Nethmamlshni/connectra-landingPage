@@ -28,7 +28,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="min-h-screen bg-white py-24 px-6 mt-30" >
+    <section className="min-h-screen py-24 px-6 mt-30 bg-gradient-to-br from-teal-100 via-white to-emerald-100">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -36,10 +36,10 @@ export default function HowItWorks() {
         transition={{ duration: 0.8 }}
         className="max-w-5xl mx-auto text-center mb-20"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-teal-900">
           See How It Works
         </h1>
-        <p className="text-gray-600">
+        <p className="text-teal-700">
           Follow these simple steps to get started in minutes.
         </p>
       </motion.div>
@@ -53,20 +53,25 @@ export default function HowItWorks() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.2 }}
-            className="relative bg-gray-50 p-8 rounded-2xl shadow-md text-center"
+            className="relative bg-gradient-to-br from-teal-600 to-emerald-500 text-white p-8 rounded-2xl shadow-lg text-center hover:scale-105 transition-transform"
           >
-            <div className="flex justify-center mb-4 text-blue-600">
+            {/* Icon */}
+            <div className="flex justify-center mb-4 text-white text-3xl">
               {step.icon}
             </div>
+
+            {/* Title */}
             <h3 className="font-semibold text-lg mb-2">
               {step.title}
             </h3>
-            <p className="text-gray-600 text-sm">
+
+            {/* Description */}
+            <p className="text-teal-100 text-sm">
               {step.desc}
             </p>
 
             {/* Step Number */}
-            <span className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+            <span className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-white text-teal-600 flex items-center justify-center font-bold shadow-md">
               {i + 1}
             </span>
           </motion.div>
