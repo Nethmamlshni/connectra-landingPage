@@ -70,8 +70,8 @@ const features = [
 export default function Features() {
   return (
     <section id="features" className="relative py-32 overflow-hidden">
-      {/* Background band (light blue like image) */}
-      <div className="absolute inset-x-0 bottom-0 h-[60%] bg-sky-200/70 -z-10" />
+      {/* Background band */}
+      <div className="absolute inset-x-0 bottom-0 h-[60%] bg-teal-100/70 -z-10" />
 
       {/* Content */}
       <motion.div
@@ -92,12 +92,12 @@ export default function Features() {
               }`}
             >
               {/* Icon */}
-              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-orange-400">
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-teal-500">
                 <feature.icon className="h-7 w-7 text-white" />
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold tracking-wide mb-3 uppercase">
+              <h3 className="text-lg font-bold tracking-wide mb-3 uppercase text-gray-900">
                 {feature.title}
               </h3>
 
@@ -107,7 +107,7 @@ export default function Features() {
               </p>
 
               {/* More link */}
-              <button className="text-sm font-semibold tracking-widest uppercase underline underline-offset-4 hover:text-orange-500 transition">
+              <button className="text-sm font-semibold tracking-widest uppercase underline underline-offset-4 text-teal-600 hover:text-teal-700 transition">
                 More
               </button>
             </motion.div>

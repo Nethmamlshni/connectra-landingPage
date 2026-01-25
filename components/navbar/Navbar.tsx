@@ -31,12 +31,11 @@ export default function Navbar() {
         </div>
 
         {/* Button */}
-        <Link
-          href="#download"
-          className="ml-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-sm font-medium hover:bg-blue-600 transition"
-        >
-          Download
-        </Link>
+      <Link href="#download" className="ml-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-teal-600 to-emerald-600  hover:from-teal-700 hover:to-emerald-700  text-white text-sm font-medium transition"
+>
+  Download
+</Link>
+
       </div>
     </motion.nav>
   )

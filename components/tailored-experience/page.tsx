@@ -9,14 +9,14 @@ export default function TailoredExperiencePage() {
   const [active, setActive] = useState("For Lecturers")
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-6">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50 py-20 px-6">
       <div className="max-w-5xl mx-auto">
 
         {/* HEADER */}
-        <h1 className="text-4xl font-bold text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900">
           Tailored Experience
         </h1>
-        <p className="text-center text-gray-600 mt-3 mb-10">
+        <p className="text-center text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">
           Interfaces designed specifically for your role in the university.
         </p>
 
@@ -28,7 +28,7 @@ export default function TailoredExperiencePage() {
               onClick={() => setActive(tab)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition
                 ${active === tab
-                  ? "bg-gradient-to-r from-blue-500 to-purple-600"
+                  ? "bg-gradient-to-r from-teal-600 to-emerald-600 text-white"
                   : "bg-white border text-gray-600"
                 }`}
             >
@@ -45,11 +45,11 @@ export default function TailoredExperiencePage() {
           className="bg-white rounded-2xl shadow-lg border p-8"
         >
           <div className="flex justify-between items-center mb-6">
-            <h3 className="font-semibold text-lg">
+            <h3 className="font-semibold text-lg text-gray-900">
               {active} Dashboard
             </h3>
 
-            <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-sm">
+            <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-teal-600 to-emerald-600 text-white text-sm font-medium transition hover:from-teal-700 hover:to-emerald-700">
               Create Session
             </button>
           </div>
@@ -57,7 +57,7 @@ export default function TailoredExperiencePage() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Active Session */}
             <div className="border rounded-xl p-5">
-              <h4 className="font-medium mb-2">Active Sessions</h4>
+              <h4 className="font-medium mb-2 text-gray-800">Active Sessions</h4>
               <div className="flex items-center justify-between text-sm">
                 <span>Advanced Algorithms</span>
                 <span className="text-green-600">● Live</span>
@@ -66,7 +66,7 @@ export default function TailoredExperiencePage() {
 
             {/* Quick Actions */}
             <div className="border rounded-xl p-5">
-              <h4 className="font-medium mb-2">Quick Actions</h4>
+              <h4 className="font-medium mb-2 text-gray-800">Quick Actions</h4>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>View Quiz Results</li>
                 <li>Attendance Report</li>

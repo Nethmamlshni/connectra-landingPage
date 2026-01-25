@@ -6,6 +6,7 @@ import UnifiedLearningPage from "../../components/unified-learning/page";
 import TailoredExperiencePage from "../../components/tailored-experience/page";
 import Features from "../../components/features/Features";
 import ContactPage from "../../components/contact/Contactpage";
+import FeedbackPage from "../../components/feedback/Feedback";
 export default function HomePage() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Download/>
       <Features />
       <ContactPage/>
+      <FeedbackPage />
       <TeamSection />
       <Footer/>
     </>
