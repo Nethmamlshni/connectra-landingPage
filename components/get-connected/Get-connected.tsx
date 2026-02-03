@@ -25,16 +25,31 @@ export default function GetConnectedWindows() {
           seamless connectivity designed for modern users.
         </p>
 
-        {/* Download Button */}
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="https://github.com/subhani-herath/connectra-frontend/releases/download/v1.0.0/Connectra-1.0.0-Windows-x64.exe"
-          className="inline-flex items-center gap-3 bg-gradient-to-r bg-teal-700 hover:bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg  transition"
-        >
-          <Download />
-          Download for Windows
-        </motion.a>
+        <div className="space-x-3">
+              {/* WINDOWS DOWNLOAD */}
+              <motion.a
+                href="https://github.com/subhani-herath/connectra-frontend/releases/download/v1.0.0/Connectra-1.0.0-Windows-x64.exe"
+                download
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+               className="inline-flex items-center gap-3 bg-gradient-to-r bg-teal-700 hover:bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg  transition"
+              >
+                Download for Windows
+              </motion.a>
+
+              {/* MAC DOWNLOAD */}
+              <motion.a
+                href="https://github.com/subhani-herath/connectra-frontend/releases/download/v2.0.0/Connectra-1.0.0-macOS-x64.dmg"
+                download
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 bg-gradient-to-r bg-teal-700 hover:bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg  transition"
+              >
+                Download for macOS
+              </motion.a>
+
+
+            </div>
       </motion.div>
 
       {/* Features */}
