@@ -99,7 +99,7 @@ export default function Hero() {
               text-white transition
             " 
           >
-            Get Connected for Windows
+            Get Connected for Connectra
           </motion.div>
         
           </Link>
