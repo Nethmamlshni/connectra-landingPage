@@ -29,7 +29,7 @@ export default function GetConnectedWindows() {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="#"
+          href="https://github.com/subhani-herath/connectra-frontend/releases/download/v1.0.0/Connectra-1.0.0-Windows-x64.exe"
           className="inline-flex items-center gap-3 bg-gradient-to-r bg-teal-700 hover:bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg  transition"
         >
           <Download />
