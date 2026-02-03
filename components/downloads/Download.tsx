@@ -55,7 +55,7 @@ export default function Download() {
           <ul className="space-y-5">
             <Requirement
               title="Operating System"
-              value="Windows 11 (64-bit)/ macOS (64-bit)/ Linux (64-bit)"
+              value="Windows 11 (64-bit)/ macOS (64-bit)"
             />
             <Requirement
               title="Memory & Storage"
@@ -121,7 +121,7 @@ export default function Download() {
 
           {/* COMING SOON CARD */}
           <div className="bg-white rounded-2xl shadow p-6 border">
-            <h3 className="font-semibold mb-3 text-gray-900">Mac & Linux Coming Soon</h3>
+            <h3 className="font-semibold mb-3 text-gray-900">Linux Coming Soon</h3>
 
             <div className="flex gap-2">
               <input
