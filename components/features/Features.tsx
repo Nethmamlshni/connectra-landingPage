@@ -33,32 +33,32 @@ const item: Variants = {
 }
 
 /* =========================
-   Feature Data
+   Feature Data – Connectra
 ========================= */
 
 const features = [
   {
-    title: "Programs",
+    title: "Smart Attendance",
     description:
-      "Discover academic programs designed to empower students with practical knowledge and real-world skills.",
+      "Automatically tracks student attendance based on join and leave time, ensuring accurate and fair participation records.",
     icon: AcademicCapIcon,
   },
   {
-    title: "Results",
+    title: "Engagement Monitoring",
     description:
-      "Track progress, achievements, and outcomes with transparent and data-driven insights.",
+      "Interactive quizzes and attention checks help lecturers monitor student engagement during live lectures.",
     icon: ChartBarIcon,
   },
   {
-    title: "Coaching",
+    title: "Role-Based Dashboards",
     description:
-      "Personalized mentoring and guidance to help students achieve academic and career success.",
+      "Dedicated dashboards for administrators, lecturers, and students with university-specific access and controls.",
     icon: UserGroupIcon,
   },
   {
-    title: "Events",
+    title: "Lecture Management",
     description:
-      "Stay updated with campus events, workshops, and networking opportunities.",
+      "Schedule classes, share and download lecture materials, and manage online sessions efficiently.",
     icon: CalendarIcon,
   },
 ]
@@ -72,6 +72,16 @@ export default function Features() {
     <section id="features" className="relative py-32 overflow-hidden">
       {/* Background band */}
       <div className="absolute inset-x-0 bottom-0 h-[60%] bg-teal-100/70 -z-10" />
+
+      {/* Section Title */}
+      <div className="max-w-3xl mx-auto text-center mb-16 px-6">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          Key Features of Connectra
+        </h1>
+        <p className="text-gray-600">
+          Discover how Connectra enhances online learning with smart attendance, engagement tracking, and lecture management.
+        </p>
+      </div>
 
       {/* Content */}
       <motion.div

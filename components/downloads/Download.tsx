@@ -55,7 +55,7 @@ export default function Download() {
           <ul className="space-y-5">
             <Requirement
               title="Operating System"
-              value="Windows 10 or Windows 11 (64-bit)"
+              value="Windows 11 (64-bit)"
             />
             <Requirement
               title="Memory & Storage"
@@ -79,16 +79,18 @@ export default function Download() {
           <div className="bg-white rounded-2xl shadow-lg p-8 text-center border">
             <h2 className="text-xl font-semibold text-gray-900">Connectra Desktop</h2>
             <p className="text-sm text-gray-500 mb-6">
-              v1.0.0 · Build 145 MB
+              v1.0.0 · Build 97.0 MB
             </p>
 
-            <motion.button 
-              whileHover={{ scale: 1.05 }} 
-              whileTap={{ scale: 0.95 }} 
-              className="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 transition"
-            >
+            <motion.a
+              href="https://github.com/subhani-herath/connectra-frontend/releases/download/v1.0.0/Connectra-1.0.0-Windows-x64.exe"
+              download
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="block w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 transition text-center"
+             >
               Download Now
-            </motion.button>
+            </motion.a>
 
             <p className="text-xs text-gray-400 mt-4">
               ✔ Virus scanned · ✔ Digital signature
